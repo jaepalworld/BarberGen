@@ -155,11 +155,11 @@ const FourSection = () => {
     const teamMember = {
         name: '최재원',
         role: '풀스택 AI 개발자',
-        description: '최신 AI 기술과 웹 개발 기술을 융합하여 혁신적인 바버샵 서비스를 개발하고 있습니다. 고객 맞춤형 스타일 분석 시스템과 예약 관리 플랫폼을 구축하여 더 나은 서비스 경험을 제공합니다.',
+        description: '최신 AI 기술과 웹 개발 기술을 혁신적인 서비스를 개발하고 있습니다. 프론트엔드부터 AI까지, 완전한 솔루션을 만드는 풀스택 AI 개발자 최재원입니다.',
         phone: '010-3161-4032',
         velog: 'https://velog.io/@cjw4032/posts',
         youtube: 'https://www.youtube.com/@%EB%82%91%EB%8B%AC%EB%8B%AC%ED%95%98%EB%88%84',
-        avatar: '/images/team-member.jpg'
+        avatar: '/images/profile.jpg'  // 변경된 부분: team-member.jpg → profile.jpg
     };
 
     const handlePhoneClick = () => {
@@ -195,7 +195,7 @@ const FourSection = () => {
             }} />
 
             <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
-                <SectionTitle variant="h2">MEET OUR DEVELOPER</SectionTitle>
+                <SectionTitle variant="h2">DEVELOPER</SectionTitle>
 
                 <Grid container justifyContent="center">
                     <Grid item xs={12} sm={8} md={6} lg={4}>

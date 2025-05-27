@@ -143,7 +143,7 @@ const SlideSubtitle = styled(Typography)(({ theme, active }) => ({
     textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)',
 }));
 
-// 버튼 스타일 수정 - 오른쪽 아래 위치로 변경
+// 버튼 스타일 수정 - 어두운 고급스러운 색상으로 변경
 const ActionButton = styled(Button)(({ theme, active }) => ({
     minWidth: 200,
     height: 54,
@@ -151,10 +151,23 @@ const ActionButton = styled(Button)(({ theme, active }) => ({
     animationDelay: '0.9s',
     fontWeight: 500,
     fontSize: '1rem',
-    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.25)',
+    background: 'linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%)', // 어두운 그라데이션
+    color: '#ffffff',
+    border: '1px solid rgba(255, 255, 255, 0.1)',
+    borderRadius: '8px',
+    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4)',
+    textTransform: 'none',
     '&:hover': {
-        boxShadow: '0 6px 25px rgba(0, 0, 0, 0.3)',
-    }
+        background: 'linear-gradient(135deg, #3c3c3c 0%, #2a2a2a 100%)',
+        boxShadow: '0 6px 25px rgba(0, 0, 0, 0.5)',
+        transform: 'translateY(-2px)',
+        border: '1px solid rgba(255, 255, 255, 0.2)',
+    },
+    '&:active': {
+        transform: 'translateY(0px)',
+        boxShadow: '0 3px 15px rgba(0, 0, 0, 0.4)',
+    },
+    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
 }));
 
 // 버튼을 위한 컨테이너 추가 - 오른쪽 아래 배치
@@ -333,7 +346,6 @@ const OneSection = () => {
             <ButtonContainer>
                 <ActionButton
                     variant="contained"
-                    color="primary"
                     endIcon={<ArrowForwardIcon />}
                     active={isAnimating}
                 >

@@ -1,31 +1,59 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import BarberMain from './components/BarberMain';
 import Hair from './components/home/services/Hair';
 import Codi from './components/home/services/Codi';
 import Dressup from './components/home/services/Dressup';
 import Random from './components/home/services/Random';
 import './App.css';
+import Header from './components/common/Header';
+import TickerSlider from './components/TickerSlider'; // 티커슬라이더 추가
+import Login from './components/home/login/Login';
+import Signup from './components/home/login/Signup';
+import Mypage from './components/home/login/Mypage';
+import Menu from './components/home/login/Menu';
+
+// AuthProvider와 MUI 테마 import
+import { AuthProvider } from './contexts/AuthContext';
+import theme from './theme';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          {/* 홈페이지 - 기존 BarberMain 컴포넌트 */}
-          <Route path="/" element={<BarberMain />} />
+    <AuthProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Router>
+          <div className="App">
+            {/* 티커슬라이더 추가 */}
+            <TickerSlider />
+            <Header />
 
-          {/* 서비스 페이지들 */}
-          <Route path="/Hair" element={<Hair />} />
-          <Route path="/Codi" element={<Codi />} />
-          <Route path="/Dressup" element={<Dressup />} />
-          <Route path="/Random" element={<Random />} />
+            {/* 티커슬라이더(45px) + 헤더(72px) = 117px 패딩 추가 */}
+            <div style={{ paddingTop: '117px' }}>
+              <Routes>
+                {/* 홈페이지 - 기존 BarberMain 컴포넌트 */}
+                <Route path="/" element={<BarberMain />} />
 
-          {/* 404 페이지 - 선택사항 */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
-    </div>
+                {/* 서비스 페이지들 */}
+                <Route path="/Hair" element={<Hair />} />
+                <Route path="/Codi" element={<Codi />} />
+                <Route path="/Dressup" element={<Dressup />} />
+                <Route path="/Random" element={<Random />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/mypage" element={<Mypage />} />
+
+                {/* 404 페이지 - 선택사항 */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </div>
+            <Menu />
+          </div>
+        </Router>
+      </ThemeProvider>
+    </AuthProvider>
   );
 }
 
@@ -33,7 +61,7 @@ function App() {
 const NotFound = () => {
   return (
     <div style={{
-      height: '100vh',
+      height: 'calc(100vh - 117px)', // 티커슬라이더 + 헤더 높이 제외
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',

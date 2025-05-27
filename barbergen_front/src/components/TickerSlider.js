@@ -60,7 +60,7 @@ const TickerSlider = () => {
         "FIREBASE", // 홀수 위치 3
         "REACT", // 짝수 위치 4
         "PYTHON", // 홀수 위치 5
-        "BarberGen" // 짝수 위치 6 - AI_TPO를 BarberGen으로 변경
+        "BarberGen" // 짝수 위치 6 - 
     ];
 
     useEffect(() => {

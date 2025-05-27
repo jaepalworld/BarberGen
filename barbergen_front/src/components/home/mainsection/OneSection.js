@@ -316,13 +316,13 @@ const OneSection = () => {
             {/* 메인 타이틀 (왼쪽 하단에 배치) */}
             <MainTitleContainer>
                 <MainTitle variant="h1">
-                    DEV Portfolio
+                    BARBERGEN Dev Portfolio
                 </MainTitle>
                 <SubTitle variant="h5" delay="0.6s">
-                    AI Style Transform
+                    AI BarberGen
                 </SubTitle>
                 <SubTitle variant="h6" delay="0.9s">
-                    Time, Place, Occasion 스튜디오
+                    당신만의 완벽한 스타일을 찾아드립니다
                 </SubTitle>
             </MainTitleContainer>
 

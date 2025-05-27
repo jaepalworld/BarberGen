@@ -3,6 +3,7 @@
 > **새로운 세대의 신사 문화를 생성하다**  
 > 전통적인 바버샵 문화와 AI 기술이 만나는 혁신적인 남성 그루밍 플랫폼
 
+![BarberGen Main](./images/main.png)
 
 ## 🎯 **BarberGen**이란?
 
@@ -22,6 +23,18 @@
 **개발 진행 상황**: 🚧 **현재 개발 중** 🚧
 
 **BarberGen**은 전통적인 바버샵의 장인정신과 최신 AI 기술을 결합하여, 현대 남성들에게 개인화된 그루밍 경험을 제공하는 혁신적인 플랫폼입니다.
+
+## 🖼️ 서비스 미리보기
+
+<div align="center">
+  <img src="./images/main1.png" width="45%" alt="AI 스타일 컨설턴트">
+  <img src="./images/main3.png" width="45%" alt="신사 커뮤니티">
+</div>
+
+<div align="center">
+  <img src="./images/main4.png" width="45%" alt="예약 시스템">
+  <img src="./images/main5.png" width="45%" alt="전체 서비스 플로우">
+</div>
 
 ### ✨ 핵심 가치
 
@@ -123,6 +136,12 @@ barbergen/
 │   │   └── models/         # 커스텀 모델
 │   ├── analysis/           # 얼굴형 분석
 │   └── recommendation/     # 추천 시스템
+├── images/                  # README 이미지 및 자료
+│   ├── main.png            # 메인 이미지
+│   ├── main1.png           # AI 스타일 컨설턴트
+│   ├── main3.png           # 신사 커뮤니티
+│   ├── main4.png           # 예약 시스템
+│   └── main5.png           # 전체 서비스 플로우
 └── docs/                   # 프로젝트 문서
     ├── api/               # API 문서
     ├── design/            # 디자인 가이드
@@ -150,9 +169,6 @@ barbergen/
 **🤝 커뮤니티 중심**: 단순한 서비스 제공을 넘어 신사들과 바버들이 함께 성장하는 생태계 구축
 
 **🔄 지속적 학습**: 사용자 피드백과 트렌드 분석을 통해 지속적으로 발전하는 AI 시스템
-
----
-
 
 ---
 
